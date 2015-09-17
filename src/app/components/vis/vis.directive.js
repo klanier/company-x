@@ -1,6 +1,6 @@
 /* global _:false */
 class VisDirective {
-  constructor () {
+  constructor ($interval) {
     'ngInject';
 
     let directive = {
@@ -34,7 +34,7 @@ class VisDirective {
 
       let graticule = d3.geo.graticule();
 
-      d3.json('/assets/data/world-50m.json', function(error, world) {
+      d3.json('/assets/data/world-50m.json', (error, world) => {
         if (!error) {
           svg.insert('path', '.graticule')
             .datum(topojson.feature(world, world.objects.land))
@@ -42,19 +42,22 @@ class VisDirective {
             .attr('fill', '#eeeeee')
             .attr('d', path);
 
-          d3.json('/assets/data/major-cities.json', function(error, cities) {
+          d3.json('/assets/data/major-cities.json', (error, cities) => {
             if (!error) {
               svg.selectAll('circle')
                   .data(_.sample(_.toArray(cities), 50))
                 .enter().append('circle')
-                  .attr('transform', function(d) {
+                  .attr('transform', (d) => {
                     let p = projection([d.lon, d.lat]);
                     return 'translate(' + p[0] + ',' + p[1] + ')';
                   })
                   .attr('fill', 'rgba(15, 147, 67, 0.4)')
-                  .attr('r', function(d) {
+                  .attr('r', 0)
+                .transition()
+                  .attr('r', (d) => {
                     return Math.random() * 10;
-                  });
+                  })
+                  .duration(1000);
             }
           });
         }
