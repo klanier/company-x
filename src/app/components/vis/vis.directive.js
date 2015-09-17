@@ -45,7 +45,7 @@ class VisDirective {
           d3.json('/assets/data/major-cities.json', function(error, cities) {
             if (!error) {
               svg.selectAll('circle')
-                  .data(_.toArray(cities))
+                  .data(_.sample(_.toArray(cities), 50))
                 .enter().append('circle')
                   .attr('transform', function(d) {
                     let p = projection([d.lon, d.lat]);
