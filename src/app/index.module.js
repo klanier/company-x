@@ -11,7 +11,7 @@ import NavbarDirective from '../app/components/navbar/navbar.directive';
 import VisDirective from '../app/components/vis/vis.directive';
 import D3Factory from '../app/components/d3/d3.factory';
 
-angular.module('test', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial'])
+angular.module('test', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial', 'ngMdIcons'])
   .constant('malarkey', malarkey)
   .constant('toastr', toastr)
   .constant('moment', moment)
@@ -26,6 +26,3 @@ angular.module('test', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngRe
   .controller('MainController', MainController)
   .directive('acmeNavbar', () => new NavbarDirective())
   .directive('visDirective', () => new VisDirective());
-
-
-

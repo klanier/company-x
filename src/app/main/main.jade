@@ -1,9 +1,17 @@
 div(layout="vertical")
-  md-sidenav(md-component-id="left", class="md-sidenav-left", md-is-locked-open="true")
-    p stuff
-    p stuff
-    p stuff
-    p stuff
-  md-content(flex="100")
+  md-sidenav(md-component-id="left", class="md-sidenav-left", md-is-locked-open="true", flex="20")
+    h1.md-display-1 v11n
+    p
+      ng-md-icon.blue(icon="polymer")
+      span one
+    p
+      ng-md-icon.yellow(icon="language")
+      span two
+    p
+      ng-md-icon.orange(icon="recent_actors")
+      span three
+    p
+      ng-md-icon.red(icon="gesture")
+      span four
+  md-content(flex="87")
     vis-directive
-

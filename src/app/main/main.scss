@@ -1,7 +1,47 @@
 md-sidenav, md-sidenav.md-locked-open, md-sidenav.md-closed.md-locked-open-add-active {
   height: 100vh;
-  min-width: 200px !important;
+  min-width: 175px !important;
   width: 50vw !important;
-  max-width: 200px !important;
+  max-width: 175px !important;
   background-color: #425360;
+
+  h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 20px 0;
+    background-color: darken(#425360, 7%);
+  }
+
+  p {
+    ng-md-icon {
+      margin-left: 15px;
+
+      &.blue {
+        fill: #63c8d1;
+      }
+
+      &.yellow {
+        fill: #f0d576;
+      }
+
+      &.orange {
+        fill: #f5891f;
+      }
+
+      &.red {
+        fill: #e7445e;
+      }
+    }
+
+    span {
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-left: 10px;
+      position: relative;
+      top: 2px;
+    }
+  }
 }
