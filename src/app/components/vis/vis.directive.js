@@ -54,9 +54,7 @@ class VisDirective {
                   .attr('fill', 'rgba(15, 147, 67, 0.4)')
                   .attr('r', function(d) {
                     return Math.random() * 10;
-                  })
-                  .attr('cx', 2)
-                  .attr('cy', 2);
+                  });
             }
           });
         }
