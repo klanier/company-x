@@ -7,6 +7,7 @@ var conf = require('./conf');
 var browserSync = require('browser-sync');
 
 var $ = require('gulp-load-plugins')();
+console.log($);
 
 function webpack(watch, callback) {
   var webpackOptions = {

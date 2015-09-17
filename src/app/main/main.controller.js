@@ -30,5 +30,4 @@ class MainController {
     this.classAnimation = '';
   }
 }
-
 export default MainController;

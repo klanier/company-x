@@ -1,0 +1,165 @@
+{
+  "Locations": {
+    "location": [
+      {
+        "bldg": "ADM",
+        "building": "Administration Building ",
+        "url": "http://www.sfsu.edu/~puboff/tour/adm.htm",
+        "latitude": "37.721497",
+        "longitude": "-122.476608"
+      },
+      {
+        "bldg": "BH",
+        "building": "Burk Hall (Edu)",
+        "url": "http://www.sfsu.edu/~puboff/tour/burk.htm",
+        "latitude": "37.723092",
+        "longitude": "-122.478978"
+      },
+      {
+        "bldg": "BUS",
+        "building": "Business Building ",
+        "url": "http://www.sfsu.edu/~puboff/tour/business.htm",
+        "latitude": "37.722237",
+        "longitude": "-122.476642"
+      },
+      {
+        "bldg": "CA",
+        "building": "Creative Arts Building ",
+        "url": "http://www.sfsu.edu/~puboff/tour/creative_arts.htm",
+        "latitude": "37.721488",
+        "longitude": "-122.479782"
+      },
+      {
+        "bldg": "CCSF",
+        "building": "City College of San Francisco",
+        "url": "http://www.ccsf.edu/NEW/en/our-campuses.html",
+        "latitude": "37.727194",
+        "longitude": "-122.451753"
+      },
+      {
+        "bldg": "COX",
+        "building": "Cox Stadium (Gym)",
+        "url": "http://www.sfsu.edu/~puboff/tour/gym.htm"
+      },
+      {
+        "bldg": "DOWN",
+        "building": "Downtown Center",
+        "url": "http://www.cel.sfsu.edu/downtowncampus/"
+      },
+      {
+        "bldg": "DTC",
+        "building": "Downtown Center",
+        "url": "http://www.cel.sfsu.edu/downtowncampus/",
+        "latitude": "37.784571",
+        "longitude": "-122.406578"
+      },
+      {
+        "bldg": "EP",
+        "building": "Ethnic Studies and Psychology Building",
+        "url": "http://www.sfsu.edu/~puboff/tour/ethnic_psychology.htm",
+        "latitude": "37.723442",
+        "longitude": "-122.47923"
+      },
+      {
+        "bldg": "FA",
+        "building": "Fine Arts Building ",
+        "url": "http://www.sfsu.edu/~puboff/tour/fine_arts.htm",
+        "latitude": "37.722305",
+        "longitude": "-122.479839"
+      },
+      {
+        "bldg": "GYM",
+        "building": "Gymnasium",
+        "url": "http://www.sfsu.edu/~puboff/tour/gym.htm",
+        "latitude": "37.724433",
+        "longitude": "-122.476051"
+      },
+      {
+        "bldg": "HH",
+        "building": "Hensill Hall (Sci)",
+        "url": "http://www.sfsu.edu/~puboff/tour/hensill.htm",
+        "latitude": "37.723531",
+        "longitude": "-122.479696"
+      },
+      {
+        "bldg": "HUM",
+        "building": "Humanities Building ",
+        "url": "http://www.sfsu.edu/~puboff/tour/humanities.htm",
+        "latitude": "37.722535",
+        "longitude": "-122.480931"
+      },
+      {
+        "bldg": "LIB",
+        "building": "Library",
+        "url": "http://www.sfsu.edu/~puboff/tour/leonard.htm",
+        "latitude": "37.721221",
+        "longitude": "-122.478183"
+      },
+      {
+        "bldg": "MAL",
+        "building": "Maloney Field",
+        "url": "http://www.sfsu.edu/~puboff/tour/gym.htm",
+        "latitude": "37.725244",
+        "longitude": "-122.482388"
+      },
+      {
+        "bldg": "ML",
+        "building": "Moss Landing Marine Lab",
+        "latitude": "36.794766",
+        "longitude": "-121.785283"
+      },
+      {
+        "bldg": "MWH",
+        "building": "Mary Ward Hall",
+        "latitude": "37.72357",
+        "longitude": "-122.483558"
+      },
+      {
+        "bldg": "SCI",
+        "building": "Science Building ",
+        "url": "http://www.sfsu.edu/~puboff/tour/science.htm",
+        "latitude": "37.723012",
+        "longitude": "-122.476219"
+      },
+      {
+        "bldg": "SHS",
+        "building": "Student Health Services",
+        "url": "http://www.sfsu.edu/~puboff/tour/student_health.htm",
+        "latitude": "37.72355",
+        "longitude": "-122.478604"
+      },
+      {
+        "bldg": "SNFC",
+        "building": "Sierra Nevada Field Campus",
+        "latitude": "39.62505",
+        "longitude": "-120.576864"
+      },
+      {
+        "bldg": "SSB",
+        "building": "Student Services Building ",
+        "url": "http://www.sfsu.edu/~puboff/tour/student_services.htm",
+        "latitude": "37.723536",
+        "longitude": "-122.480528"
+      },
+      {
+        "bldg": "SUT",
+        "building": "Sutro Library (Winston Drive)",
+        "latitude": "37.721221",
+        "longitude": "-122.478183"
+      },
+      {
+        "bldg": "TH",
+        "building": "Thornton Hall (Sci)",
+        "url": "http://www.sfsu.edu/~puboff/tour/thornton.htm",
+        "latitude": "37.723876",
+        "longitude": "-122.476913"
+      },
+      {
+        "bldg": "TIBR",
+        "building": "Romberg Tiburon Center",
+        "latitude": "37.890604",
+        "longitude": "-122.448421"
+      }
+    ]
+  }
+}
