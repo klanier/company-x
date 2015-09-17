@@ -12,7 +12,7 @@ class MalarkeyDirective {
       controller: MalarkeyController,
       controllerAs: 'vm'
     };
-
+    console.log(directive);
     return directive;
 
     function linkFunc(scope, el, attr, vm) {
