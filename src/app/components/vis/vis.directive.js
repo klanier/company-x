@@ -1,26 +1,33 @@
 /* global _:false */
-class VisDirective {
-  constructor ($interval) {
-    'ngInject';
-
+class VisWorld {
+  constructor ($interval, d3, topojson) {
     this.restrict = 'E';
     this.scope =  {
       data: '='
     };
     this.template = '<div id="vis"></div>';
     this.$interval = $interval;
+    this.d3 = d3;
+    this.topojson = topojson;
+  }
+
+  compile () {
+    return this.link.bind(this);
   }
 
   link(scope, el) {
-    const d3 = window.d3;
-    const topojson = window.topojson;
-    const colors = d3.scale.ordinal().range([
+    const $interval = this.$interval;
+    const d3 = this.d3;
+    const topojson = this.topojson;
+    const colorList = [
       'rgba(177, 213, 72, 0.4)',
       'rgba(99, 200, 209, 0.4)',
-      'rgba(240, 213, 117, 0.4)',
+      'rgba(224, 213, 67, 0.5)',
       'rgba(245, 137, 31, 0.4)',
-      'rgba(231, 68, 94, 0.4)'
-    ]);
+      'rgba(231, 68, 94, 0.4)',
+      'rgba(138, 83, 177, 0.4)'
+    ];
+    const colors = d3.scale.ordinal().range(colorList);
 
     // Decrease width and height to allow for margin around svg
     let width = angular.element('#vis')[0].clientWidth - 175,
@@ -50,9 +57,13 @@ class VisDirective {
 
         d3.json('/assets/data/major-cities.json', (error, cities) => {
           if (!error) {
+            let citiesArr = _.toArray(cities);
             svg.selectAll('circle')
-                .data(_.sample(_.toArray(cities), 50))
+                .data(_.sample(citiesArr, 50))
               .enter().append('circle')
+                .attr('id', (d) => {
+                  return d.city.replace(/\s/g, '');
+                })
                 .attr('transform', (d) => {
                   let p = projection([d.lon, d.lat]);
                   return 'translate(' + p[0] + ',' + p[1] + ')';
@@ -60,10 +71,32 @@ class VisDirective {
                 .attr('fill', (d, i) => { return colors(i); })
                 .attr('r', 0)
               .transition()
-                .attr('r', (d) => {
+                .attr('r', () => {
                   return Math.random() * 10;
                 })
                 .duration(1000);
+
+            $interval(() => {
+              let place = _.sample(citiesArr, 1)[0];
+              svg.append('circle')
+                  .attr('transform', () => {
+                    let p = projection([place.lon, place.lat]);
+                    return 'translate(' + p[0] + ',' + p[1] + ')';
+                  })
+                  .attr('fill', () => {
+                    return _.sample(colorList, 1)[0];
+                  })
+                  .attr('r', 0)
+                .transition()
+                  .attr('r', 20)
+                  .duration(1000)
+                .transition()
+                  .attr('r', () => {
+                    return Math.random() * (10 - 3) + 3;
+                  })
+                  .duration(1000);
+
+            }, Math.random() * 7000);
           }
         });
       }
@@ -71,4 +104,8 @@ class VisDirective {
   }
 
 }
-export default VisDirective;
+
+// TODO: see if necessary for register directive helper
+// VisWorld.$inject = ['$interval', 'd3'];
+
+export default VisWorld;

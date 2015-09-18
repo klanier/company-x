@@ -1,15 +1,14 @@
-/* global malarkey:false, toastr:false, moment:false, d3:false*/
+/* global malarkey:false, toastr:false, moment:false */
 import config from './index.config';
 
 import routerConfig from './index.route';
 
 import runBlock from './index.run';
 import MainController from './main/main.controller';
-import GithubContributorService from '../app/components/githubContributor/githubContributor.service';
-import WebDevTecService from '../app/components/webDevTec/webDevTec.service';
 import NavbarDirective from '../app/components/navbar/navbar.directive';
-import VisDirective from '../app/components/vis/vis.directive';
-import D3Factory from '../app/components/d3/d3.factory';
+import VisWorld from '../app/components/vis/vis.directive';
+import D3Factory from '../app/components/d3/d3.service';
+import TopoJsonFactory from '../app/components/topojson/topojson.service';
 
 angular.module('test', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial', 'ngMdIcons'])
   .constant('malarkey', malarkey)
@@ -20,9 +19,7 @@ angular.module('test', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngRe
   .config(routerConfig)
 
   .run(runBlock)
-  .service('githubContributor', GithubContributorService)
-  .service('webDevTec', WebDevTecService)
-  .service('d3',D3Factory)
+  .service('d3', D3Factory)
+  .service('topojson', TopoJsonFactory)
   .controller('MainController', MainController)
-  .directive('acmeNavbar', () => new NavbarDirective())
-  .directive('visDirective', () => new VisDirective());
+  .directive('visWorld', ['$interval', 'd3', 'topojson', ($interval, d3, topojson) => new VisWorld($interval, d3, topojson)]);
